@@ -67,12 +67,24 @@ var fluid_3_0_0 = fluid_3_0_0 || {};
             if (resourceSpec.url && !resourceSpec.href) {
                 resourceSpec.href = resourceSpec.url;
             }
+
+            // TODO: this may be replaced by commented out block below as a fix
+            // for FLUID-6305 / FLUID-6306
             if (that.options.defaultLocale) {
                 resourceSpec.defaultLocale = that.options.defaultLocale;
                 if (resourceSpec.locale === undefined) {
                     resourceSpec.locale = that.options.defaultLocale;
                 }
             }
+
+            // TODO: potential fix for FLUID-6305 / FLUID-6306
+            // if (that.options.defaultLocale) {
+            //     resourceSpec.defaultLocale = that.options.defaultLocale;
+            // }
+            // if (!resourceSpec.locale) {
+            //     resourceSpec.locale = resourceSpec.defaultLocale;
+            // }
+
         });
         if (that.options.amalgamateClasses) {
             fluid.fetchResources.amalgamateClasses(resourceSpecs, that.options.amalgamateClasses, that.operate);
