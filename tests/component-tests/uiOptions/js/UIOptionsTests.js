@@ -101,6 +101,15 @@ https://github.com/fluid-project/infusion/raw/master/Infusion-LICENSE.txt
                 {
                     funcName: "fluid.tests.uiOptions.prefsEditorLocalizedTester.verifySlidingPanelMessages",
                     args: ["{prefsEditor}", "prefsEditor", "Préférences de l'utilisateur"]
+                },
+                {
+                    func: "{prefsEditor}.events.onInterfaceLocaleChangeRequested.fire",
+                    args: ["es"]
+                },
+                {
+                    event: "{prefsEditor messageLoader}.events.onResourcesLoaded",
+                    listener: "jqUnit.assertEquals",
+                    args: ["defaultLocale is properly propagated to messageLoader", "es", "{prefsEditor}.prefsEditorLoader.messageLoader.options.defaultLocale"]
                 }]
             }]
         }]
