@@ -170,6 +170,18 @@ var fluid_3_0_0 = fluid_3_0_0 || {};
                         },
                         prefsEditor: {
                             options: {
+                                model: {
+                                    local: {
+                                        locale: "{fluid.uiOptions.prefsEditor.localized}.model.locale"
+                                    }
+                                },
+                                modelListeners: {
+                                    "local.locale": {
+                                        listener: "fluid.prefs.prefsEditor.handleAutoSave",
+                                        args: ["{that}"],
+                                        namespace: "autoSaveLocale"
+                                    }
+                                },
                                 listeners: {
                                     "{messageLoader}.events.onResourcesLoaded": [{
                                         funcName: "fluid.uiOptions.prefsEditor.localized.updateUioPanelLocales",

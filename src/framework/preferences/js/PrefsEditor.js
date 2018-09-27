@@ -64,7 +64,7 @@ var fluid_3_0_0 = fluid_3_0_0 || {};
                 createOnEvent: "afterInitialSettingsFetched",
                 options: {
                     defaultLocale: "{prefsEditorLoader}.options.defaultLocale",
-                    locale: "{prefsEditorLoader}.settings.preferences.locale",
+                    locale: "{prefsEditorLoader}.settings.locale",
                     resourceOptions: {
                         dataType: "json"
                     },
