@@ -16,7 +16,7 @@ var fluid_3_0_0 = fluid_3_0_0 || {};
     fluid.defaults("fluid.uiOptions.prefsEditor.localizedDemoControls", {
         gradeNames: ["fluid.viewComponent"],
         events: {
-            onLocaleChangeRequested: null
+            onLocaleChangeRequested: "{fluid.uiOptions.prefsEditor.localized}.events.onInterfaceLocaleChangeRequested"
         },
         selectors: {
             languageLinkEnglish: ".flc-languages-en",
