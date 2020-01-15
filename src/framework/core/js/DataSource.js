@@ -292,7 +292,7 @@ var fluid_3_0_0 = fluid_3_0_0 || {};
         //}
         var termMap = fluid.transform(requestOptions.termMap, encodeURIComponent);
 
-        requestOptions.path = (resolveUrl || fluid.dataSource.URL.resolveUrl)(requestOptions.path, requestOptions.termMap, directModel);
+        requestOptions.path = (resolveUrl || fluid.dataSource.URL.resolveUrl)(requestOptions.url, requestOptions.termMap, directModel);
 
         fluid.stringTemplate(requestOptions.path, termMap);
         if (cookieJar && cookieJar.cookie && componentOptions.storeCookies) {
